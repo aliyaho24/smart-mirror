@@ -3,7 +3,6 @@ import HiLo from './hiLo.js';
 import WeatherIcon from './weatherIcon.js'
 import './weather.css';
 
-
 class Weather extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +13,7 @@ class Weather extends Component {
       high: '-',
       low: '-',
       units: 'imperial',
-      zip: 94608,
+      zip: 50339,
       description: '-'
     };
   }
