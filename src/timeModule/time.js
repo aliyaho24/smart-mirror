@@ -1,44 +1,42 @@
 import React, { Component } from 'react';
 import './time.css';
 
-export default class Time extends Component {
-  state = {
-    date: "",
-    time: "",
-    meridiem: ""
-  };
-
-  componentDidMount() {
-    this.getDate();
+class Time extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date(), meridiem: '', time: ''};
   }
 
-  getDate = () => {
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  tick() {
     var dateObject = new Date();
-    var date = dateObject.toDateString();
     var time = dateObject.toLocaleTimeString([], {timeStyle: 'short'});
 
     this.setState({
-      date: date,
-      time: time.split(" ")[0],
-      meridiem: time.split(" ")[1]
+      date: dateObject,
+      meridiem: time.split(" ")[1],
+      time: time.split(" ")[0]
     });
   };
 
   render() {
-    const {
-      date,
-      time,
-      meridiem
-    } = this.state;
 
     return (
       <div className="container">
         <div className="time-box">
-          <div className="time">{time}</div>
-          <div className="ampm">{meridiem}</div>
+          <div className="time">{this.state.time}</div>
+          <div className="ampm">{this.state.meridiem}</div>
         </div>
-        <div className="date">{date}</div>
+        <div className="date">{this.state.date.toDateString()}</div>
       </div>
     );
   }
 }
+
+export default Time;

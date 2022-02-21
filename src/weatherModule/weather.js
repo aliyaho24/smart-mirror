@@ -3,7 +3,6 @@ import HiLo from './hiLo.js';
 import WeatherIcon from './weatherIcon.js'
 import './weather.css';
 
-
 class Weather extends Component {
   constructor(props) {
     super(props);
