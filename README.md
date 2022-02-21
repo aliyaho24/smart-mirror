@@ -1,5 +1,24 @@
+## About
+
+This is a React rewrite of the popular MagicMirror! I was motivated to do this because I am building my own magic mirror at home and I wanted to move faster with creating new modules as I am familiar with React. It's also a great opportunity to learn and understand how the application works on a deeper level than I would gain by adding on to the open source code. 
+
+This project has a LONG way to go and there are a ton of cool features that I'd personally find useful that I want to add here. So far, the basic structure is there. Check out the screenshot below for a preview of the current state. So far it:
+
+- displays the weather and a custom image representing the conditions
+- show the time live
+- generates a random quote every 5 seconds in random places on the screen
+- has a draggable horizontal scrolling menu bar at the bottom
+
+I won't list everything I would like to add (much of it will be eventually descoped anyway), but a few future additions include:
+- sports highlights interface upon open
+- random video guided meditation frame
+- an interface to handle input from the Raspberry Pi camera module and allow you to take selfies
+- settings interface that allows you to rearrange things
+- social media "iframe"
+- and much much more!
+
 ## Current State
-<img width="1212" alt="Screen Shot 2022-02-21 at 3 44 05 AM" src="https://user-images.githubusercontent.com/33499496/154949049-209f0ecb-0324-4898-891f-c4c3a7512a67.png">
+![Screen Shot 2022-02-21 at 12 56 29 PM](https://user-images.githubusercontent.com/33499496/155025380-727bb94a-27bf-4a8b-876d-57c90483ea78.png)
 
 
 # Getting Started with Create React App
@@ -72,4 +91,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# smart-mirror
