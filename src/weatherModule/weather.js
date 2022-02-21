@@ -13,7 +13,7 @@ class Weather extends Component {
       high: '-',
       low: '-',
       units: 'imperial',
-      zip: 50339,
+      zip: 94608,
       description: '-'
     };
   }
