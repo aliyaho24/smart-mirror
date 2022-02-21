@@ -22,7 +22,7 @@ export default class Quote extends Component {
 
   async componentDidMount() {
     try {
-      setInterval(async () => {this.getQuote()}, 2000);
+      setInterval(async () => {this.getQuote()}, 5000);
     } catch(e) {
       console.log(e);
     }
