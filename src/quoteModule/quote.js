@@ -7,7 +7,13 @@ export default class Quote extends Component {
       "Life is a maze, you are amazing.",
       "Have a great day!",
       "Choose violence.",
-      "Be great my friend"
+      "Be great my friend.",
+      "You are beautiful!",
+      "Your best is good enough!",
+      "Dont stress the little things",
+      "Take a breath",
+      "Count your blessings",
+      "Do something nice for someone today"
     ],
     quote: "",
     positionLeft: '0px',
@@ -16,7 +22,7 @@ export default class Quote extends Component {
 
   async componentDidMount() {
     try {
-      setInterval(async () => {this.getQuote()}, 5000);
+      setInterval(async () => {this.getQuote()}, 2000);
     } catch(e) {
       console.log(e);
     }
@@ -24,8 +30,9 @@ export default class Quote extends Component {
 
   getQuote = () => {
     var quote = this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)];
-    var left = Math.floor(Math.random() * window.innerWidth - 50) + 'px';
-    var top = Math.floor(Math.random() * window.innerHeight - 50) + 'px';
+
+    var left = Math.floor(Math.random() * window.innerWidth/2) - 200 + 'px';
+    var top = Math.floor(Math.random() * window.innerHeight/2) + 'px';
     this.setState({ quote: quote, positionLeft: left, positionTop: top });
   };
 
@@ -33,8 +40,16 @@ export default class Quote extends Component {
     const { quote, positionTop, positionLeft } = this.state;
 
     return (
-      <div className="container" style={{positionLeft, positionTop}}>
-          <div>{quote}</div>
+      <div className="center">
+        <div
+          className="quote"
+          style={{
+            marginLeft: positionLeft,
+            marginTop: positionTop
+          }}
+        >
+            <div>{quote}</div>
+        </div>
       </div>
     );
   }

@@ -1,6 +1,20 @@
-.container {
+.quote {
   font-family: BlinkMacSystemFont;
+  font-size: xx-large;
   width: auto;
   display: inline-block;
-  padding: 20px 30px;
+  overflow: hidden;
+  clear: both;
+  white-space: nowrap;
+  position: absolute;
+}
+
+.center {
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-top: -25vh;
+  margin-left: -25vh;
+  width: 50vh;
+  height: 50vh;
 }
